@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Henrique Consultoria</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script type="text/javascript">
+    		function Load()
+    		{
+    			var q1 =document.getElementById("qnt_1");
+    			var q2 =document.getElementById("qnt_2");
+    			var q3 =document.getElementById("qnt_3");
+    			var q4 =document.getElementById("qnt_4");
+    			var q5 =document.getElementById("qnt_5");
+    			var q6 =document.getElementById("qnt_6");
+    			var q7 =document.getElementById("qnt_7");
+    			var q8 =document.getElementById("qnt_8");
+    			var q9 =document.getElementById("qnt_9");
+    			var q10 =document.getElementById("qnt_10");
+    			var q11=document.getElementById("qnt_11");
+
+    			var v1 = document.getElementById("vl_id").value;
+        		var v2 = document.getElementById("qnt_id").value;
+        			var v3 = parseFloat(v1-v2);
+
+        			qtd_1 = v3 / 100;  
+        			v3 = v3 - (qtd_1 * 100);
+
+        			qtd_2 = v3 / 50;  
+        			v3 = v3 - (qtd_2 * 50);
+
+        			qtd_3 = v3 / 20;  
+        			v3 = v3 - (qtd_3 * 20);
+
+        			qtd_4 = v3 / 10;  
+        			v3 = v3 - (qtd_4 * 10);
+
+        			qtd_5 = v3 / 5;  
+        			v3 = v3 - (qtd_5 * 5);
+
+        			qtd_6 = v3 / 2;  
+        			v3 = v3 - (qtd_6 * 2);
+
+        			qtd_7 = v3;  
+        			
+        			qtd_8 = v3 / 0.5;  
+        			v3 = v3 - (qtd_8 * 0.5);
+
+        			qtd_9 = v3 / 0.25;  
+        			v3 = v3 - (qtd_9 * 0.25);
+
+        			qtd_10 = v3 / 0.1;  
+        			v3 = v3 - (qtd_10 * 0.1);
+
+        			qtd_11 = v3 / 0.05;  
+        			v3 = v3 - (qtd_2 * 0.05);
+
+        			
+        	}
+
+
+		</script>
+	</head>
+	<body>
+		<nav class="navbar navbar-light  bg-primary">
+  			<a class="navbar-brand" href="#">
+   				Sistema de Compras
+ 			</a>
+		</nav>
+		<form style="position: relative; margin: 10%">
+  			<div class="form-group">
+    			<label>Valor</label>
+    			<input type="text" class="form-control" id="vl_id" placeholder="Valor dado pelo cliente">
+  			</div>
+  			<div class="form-group">
+    			<label>Compra</label>
+    			<input type="text" class="form-control" id="com_id" placeholder="Valor da compra">
+  			</div>
+  			<button type="submit" class="btn btn-primary" id="ad_id" onclick="Load()">Adicionar</button>
+		</form>
+		
+		<table class="table" style="position: relative; margin: 10%">
+  			<thead>
+    			<tr>
+      				<th scope="col">Moéda/Cedula</th>
+      				<th scope="col">Quantidade</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<tr>
+      				<th scope="row">R$100,00</th>
+      				<td id="qnt_1"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$50,00</th>
+      				<td id="qnt_2"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$20,00</th>
+      				<td id="qnt_3"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$10,00</th>
+      				<td id="qnt_4"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$5,00</th>
+      				<td id="qnt_5"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$2,00</th>
+      				<td id="qnt_6"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$1,00</th>
+      				<td id="qnt_7"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$0,50</th>
+      				<td id="qnt_8"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$0,25</th>
+      				<td id="qnt_9"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$0,10</th>
+      				<td id="qnt_10"></td >
+    			</tr>
+    			<tr>
+      				<th scope="row">R$0,05</th>
+      				<td id="qnt_11"></td >
+    			</tr>
+  			</tbody>
+		</table>
+	</body>
+</html>
